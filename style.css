@@ -1,0 +1,31 @@
+.tile {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(0, 255, 179);
+} 
+
+/* Her blir det style på div'ene inni grid div'en (div i div). */
+.tile div {
+height: 40px;
+width: 40px;
+} 
+.tile div:hover {
+    opacity: 70%;
+}
+
+.bomb {
+    background-color: orange;
+    color: greenyellow;
+}
+.valid {
+    background-color: lightgrey;
+    color: greenyellow;
+}
+.checked {
+    background: orangered;
+}
+.flag {
+    background-color: green;
+}
