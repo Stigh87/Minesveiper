@@ -4,28 +4,23 @@ function show() {
 let appDiv = document.getElementById('app');
 let html = '';
 
-
-
-
-
-
-
-for (let i = 0; i < width*width; i++) {
-const rute = document.createElement('div');
-rute.setAttribute('id', i);
-rute.classList.add();
-app.appendChild(rute);
-board.push(rute);
-html += `<div onclick="trykk(this, ${i})" class="tiles, ${shuffledArray[i]}"></div>`;
+html += `<div>Score, time, level etc:</div>`
+html += `<div id="board">`
+for (let element of shuffledArray) {
+// let first = (element.i % width === 0) ? 'first' : ''; ${first}SE PÅ DENNE!
+// let leftSide = (index % width === 0); 
+html += ` 
+   <div id="${element.id}"
+        class="${element.class} ${tile} " 
+        onclick="clicked(this, ${element.totalMines}, ${element.i})">${element.totalMines}</div>
+        `   
 }
+`</div>`
+html += `<div id="nav">
 
-// legg inn ID "manuelt" med "rute${[i]}" ??
+Start, restart, newxtLvl, etc:
+<button onclick="newGame()">START</button>
 
-
-
-        // html += `<hr>
-        // <button onclick="flag()">Flag</button> <br>
-        // <button onclick="newGame()">NEW GAME</button>`
-    appDiv.innerHTML = html;
+</div>`
+appDiv.innerHTML = html;
 }
-

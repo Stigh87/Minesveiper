@@ -1,8 +1,11 @@
-let bombAmount = 20;
-let width = 10;
-let gameOver = false;
-let board = [];
-
+const width = 10;
+const mines = 10;
+const board = {};
+let object = {};
 let shuffledArray = [];
+let numberArray = [];
+let tile = "tile";
+let newClass = "";
 
-let total = 0;
+let data = '';
+let minesNumber = 0;
